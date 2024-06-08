@@ -1,10 +1,11 @@
 import Button from "@mui/material/Button";
+import  Typography  from "@mui/material/Typography";
 function App() {
   return (
     <>
-      <p>sdfasdfdsf</p>
-      <Button variant="contained">Hello world</Button>
-    </>
+      <Typography variant='body2' color={'palette.text.secondary'}>fdsafsadfsd</Typography>
+      <Button variant="contained"  color='secondary'>Hello world</Button>
+      </>
   );
 }
 
