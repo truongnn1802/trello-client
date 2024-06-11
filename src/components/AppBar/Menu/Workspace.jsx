@@ -11,7 +11,7 @@ import {
   ContentCut,
   ContentPaste,
 } from "@mui/icons-material";
-import { Divider } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 
@@ -26,7 +26,7 @@ export default function Workspace() {
   };
 
   return (
-    <div>
+    <Box>
       <Button
         sx={{ color: "#fff" }}
         id="basic-button-workspaces"
@@ -82,6 +82,6 @@ export default function Workspace() {
           <ListItemText>Web Clipboard</ListItemText>
         </MenuItem>
       </Menu>
-    </div>
+    </Box>
   );
 }
