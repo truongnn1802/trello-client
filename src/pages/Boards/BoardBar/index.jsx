@@ -3,16 +3,17 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 function BoardBar() {
   const MENU_STYLE = {
-    color: "primary.main",
+    color: "#fff",
     paddingX: "4px",
     border: "none",
-    background: "#fff",
+    background: "transparent",
     "& .MuiSvgIcon-root": {
-      color: "primary.main",
+      color: "#fff",
     },
     "&:hover": {
       bgcolor: "primary.50",
     },
+    border:'none'
   };
   return (
     <Box
@@ -25,6 +26,9 @@ function BoardBar() {
         paddingX: 2,
         overflowX: "auto",
         borderTop: "1px solid #00bfa5",
+        bgcolor: (theme) =>
+          theme.palette.mode === "dark" ? "#34495e" : "#1976d2",
+        borderBottom: "1px solid #fff",
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
@@ -55,7 +59,15 @@ function BoardBar() {
         />
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-        <Button variant="outlined" startIcon={<PersonAddIcon/>}>Invite</Button>
+        <Button
+          variant="outlined"
+          startIcon={<PersonAddIcon />}
+          sx={{ color: "#fff", borderColor: "#fff",'&:hover':{
+            borderColor: "#fff"
+          } }}
+        >
+          Invite
+        </Button>
 
         <AvatarGroup
           max={4}

@@ -10,18 +10,18 @@ const theme = extendTheme({
   },
 
   colorSchemes: {
-    light: {
-      palette: {
-        primary: teal,
-        secondary: deepOrange,
-      },
-    },
-    dark: {
-      palette: {
-        primary: cyan,
-        secondary: orange,
-      },
-    },
+    // light: {
+    //   palette: {
+    //     primary: teal,
+    //     secondary: deepOrange,
+    //   },
+    // },
+    // dark: {
+    //   palette: {
+    //     primary: cyan,
+    //     secondary: orange,
+    //   },
+    // },
   },
   components: {
     // Name of the component
@@ -53,7 +53,7 @@ const theme = extendTheme({
       styleOverrides: {
         root: ({ theme }) => {
           return {
-            color: theme.palette.primary.main,
+            // color: theme.palette.primary.main,
             fontSize: "0.875rem",
           };
         },
@@ -63,17 +63,19 @@ const theme = extendTheme({
       styleOverrides: {
         root: ({ theme }) => {
           return {
-            color: theme.palette.primary.main,
+            // color: theme.palette.primary.main,
             fontSize: "0.875rem",
-            "MuiOutlinedInput-notchedOutline": {
-              borderColor: theme.palette.primary.light,
-            },
-            "&:hover": {
-              "MuiOutlinedInput-notchedOutline": {
-                borderColor: theme.palette.primary.main,
-              },
-            },
-            "& fieldset": {},
+            // "MuiOutlinedInput-notchedOutline": {
+            //   borderColor: theme.palette.primary.light,
+            // },
+            // "&:hover": {
+            //   "MuiOutlinedInput-notchedOutline": {
+            //     borderColor: theme.palette.primary.main,
+            //   },
+            // },
+            "& fieldset": {borderWidth:'0.5px !important'},
+            "&:hover fieldset": {borderWidth:'0.5px !important'},
+            "&:focused fieldset": {borderWidth:'0.5px !important'},
           };
         },
       },

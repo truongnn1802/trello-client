@@ -1,20 +1,13 @@
-import * as React from "react";
+import { Check } from "@mui/icons-material";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Divider } from "@mui/material";
 import Button from "@mui/material/Button";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import Typography from "@mui/material/Typography";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import {
-    Check,
-  Cloud,
-  ContentCopy,
-  ContentCut,
-  ContentPaste,
-} from "@mui/icons-material";
-import { Divider } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import * as React from "react";
 
 export default function Recent() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -29,6 +22,7 @@ export default function Recent() {
   return (
     <div>
       <Button
+        sx={{ color: "#fff" }}
         id="basic-button-recent"
         aria-controls={open ? "basic-menu-recent" : undefined}
         aria-haspopup="true"

@@ -5,10 +5,15 @@ import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import { Cloud, ContentCopy, ContentCut, ContentPaste } from "@mui/icons-material";
+import {
+  Cloud,
+  ContentCopy,
+  ContentCut,
+  ContentPaste,
+} from "@mui/icons-material";
 import { Divider } from "@mui/material";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 
 export default function Workspace() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -23,12 +28,13 @@ export default function Workspace() {
   return (
     <div>
       <Button
+        sx={{ color: "#fff" }}
         id="basic-button-workspaces"
         aria-controls={open ? "basic-menu-workspaces" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        endIcon={open ? <ExpandLessIcon/> : <ExpandMoreIcon/>}
+        endIcon={open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
       >
         Workspaces
       </Button>
